@@ -157,8 +157,7 @@ public class AdminController {
             @ApiResponse(responseCode = "200", description = "Admin deleted successfully."),
             @ApiResponse(responseCode = "404", description = "Admin not found."),
             @ApiResponse(responseCode = "401", description = "Unauthorized."),
-            @ApiResponse(responseCode = "403", description = "Forbidden."),
-            @ApiResponse(responseCode = "405", description = "Method not allowed.")
+            @ApiResponse(responseCode = "403", description = "Forbidden.")
     })
     public ResponseEntity<String> deleteAdmin(@PathVariable String email) {
         Admin admin = adminService.findByEmail(email);
