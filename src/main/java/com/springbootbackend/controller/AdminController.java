@@ -148,7 +148,7 @@ public class AdminController {
         return ResponseEntity.ok(admins);
     }
 
-    @DeleteMapping("/delete/{email}")
+    /*@DeleteMapping("/delete/{email}")
     @Operation(
             summary = "Delete an admin user",
             description = "Deletes an admin user by their ID."
@@ -157,7 +157,7 @@ public class AdminController {
             @ApiResponse(responseCode = "200", description = "Admin deleted successfully."),
             @ApiResponse(responseCode = "404", description = "Admin not found."),
             @ApiResponse(responseCode = "401", description = "Unauthorized."),
-            @ApiResponse(responseCode = "403", description = "Forbidden.")
+            //@ApiResponse(responseCode = "403", description = "Forbidden.")
     })
     public ResponseEntity<String> deleteAdmin(@PathVariable String email) {
         Admin admin = adminService.findByEmail(email);
@@ -169,5 +169,5 @@ public class AdminController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Admin not found.");
         }
         return ResponseEntity.ok("Admin deleted successfully.");
-    }
+    }*/
 }
